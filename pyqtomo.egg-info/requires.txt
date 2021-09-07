@@ -1,6 +1,0 @@
-collections
-itertools
-matplotlib
-numpy
-qutip
-scipy
