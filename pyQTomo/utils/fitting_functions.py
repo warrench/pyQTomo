@@ -36,7 +36,8 @@ class CosineModel(lmfit.Model):
 
         """
         amp_guess = abs(max(data) - min(data)) / 2
-        freq_guess, ph_guess = fft_freq_phase_guess(data, x)
+        # freq_guess, ph_guess = fft_freq_phase_guess(data, x)
+        freq_guess, ph_guess = kwargs['freq'], kwargs['phi']
         params = self.make_params()
 
         def pset(param, value, min=-np.inf, max=np.inf):
